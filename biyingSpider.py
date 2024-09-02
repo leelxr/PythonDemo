@@ -7,7 +7,7 @@ con = requests.get(url)
 content = con.text
 reg = r"(az/hprichbg/rb/.*?.jpg)"
 a = re.findall(reg, content, re.S)[0]
-print(a)
+#print(a)
 picUrl = url + a
 read = requests.get(picUrl)
 f = open('%s.jpg' % local, 'wb')
